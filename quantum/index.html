@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Portfolio — yQuantum 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+               background: #fff; color: #222; display: flex; min-height: 100vh; }
+        .sidebar { width: 220px; background: #1a1a1a; color: #ddd; padding: 1.5rem 0;
+                    position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 10; }
+        .sidebar h2 { color: #f5c518; padding: 0 1.2rem; margin-bottom: 0.5rem; font-size: 1rem; }
+        .sidebar .section-label { color: #888; padding: 0.3rem 1.2rem 0.2rem; font-size: 0.7rem;
+                                   text-transform: uppercase; letter-spacing: 0.05em; }
+        .sidebar a { display: block; padding: 0.5rem 1.2rem; color: #bbb; text-decoration: none;
+                      font-size: 0.8rem; border-left: 3px solid transparent; transition: all 0.15s; }
+        .sidebar a:hover, .sidebar a.active { color: #f5c518; background: #2a2a2a; border-left-color: #f5c518; }
+        .sidebar .divider { border-top: 1px solid #333; margin: 0.6rem 1.2rem; }
+        .main { margin-left: 220px; flex: 1; }
+        .hero { background: #fff; padding: 2rem 3rem 1.5rem; border-bottom: 3px solid #f5c518; }
+        .hero-top { display: flex; justify-content: space-between; align-items: center; }
+        .hero h1 { font-size: 1.8rem; color: #1a1a1a; font-weight: 700; }
+        .hero .subtitle { color: #888; font-size: 0.85rem; margin-top: 0.2rem; }
+        .hero-number .pct { font-size: 3rem; font-weight: 800; line-height: 1; }
+        .hero-number .pct-label { font-size: 0.8rem; color: #888; }
+        .exchange-tabs { display: flex; gap: 0.4rem; margin-bottom: 1rem; }
+        .exchange-tabs button { padding: 0.35rem 0.9rem; border: 2px solid #e0e0e0; background: #fff;
+                                 color: #666; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+        .exchange-tabs button.active { background: #f5c518; color: #1a1a1a; border-color: #f5c518; font-weight: 600; }
+        .chart-panel { padding: 1.5rem 3rem; }
+        .chart-panel h2 { color: #1a1a1a; margin-bottom: 0.3rem; font-size: 1.1rem; }
+        .chart-panel .note { color: #888; font-size: 0.8rem; margin-bottom: 0.8rem; }
+        .chart-frame { width: 100%; height: 550px; border: 1px solid #e0e0e0; border-radius: 8px; background: #fafafa; }
+        .chart-frame-tall { height: 650px; }
+        .data-source { color: #aaa; font-size: 0.75rem; margin-top: 0.3rem; }
+        footer { padding: 1.5rem 3rem; color: #aaa; font-size: 0.8rem; border-top: 1px solid #eee; }
+        footer a { color: #f5c518; }
+        @media (max-width: 768px) { .sidebar { display: none; } .main { margin-left: 0; } }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <h2>Quantum Portfolio</h2>
+        <div class="section-label">Markets</div>
+        <a href="#" onclick="selectExchange('sp500');return false;" class="active" id="nav-sp500">S&amp;P 500 (NYSE)</a>
+        <a href="#" onclick="selectExchange('nikkei');return false;" id="nav-nikkei">Nikkei 225 (TSE)</a>
+        <a href="#" onclick="selectExchange('lse');return false;" id="nav-lse">London (FTSE)</a>
+        <div class="divider"></div>
+        <div class="section-label">Analysis</div>
+            <a href="#" onclick="loadChart('charts/feature_correlations.html');return false;">Feature Correlations</a>
+            <a href="#" onclick="loadChart('charts/method_comparison.html');return false;">Method Comparison</a>
+            <a href="#" onclick="loadChart('charts/sliding_window.html');return false;">Sliding Window</a>
+            <a href="#" onclick="loadChart('charts/circuit_gallery.html');return false;">Circuit Gallery</a>
+            <a href="#" onclick="loadChart('charts/portfolio_builder.html');return false;">Portfolio Builder</a>
+            <a href="#" onclick="loadChart('charts/hardware_fidelity.html');return false;">Hardware Fidelity</a>
+            <a href="#" onclick="loadChart('charts/cost_performance.html');return false;">Cost Performance</a>
+            <a href="#" onclick="loadChart('charts/telemetry.html');return false;">Telemetry</a>
+
+        <div class="divider"></div>
+        <a href="https://github.com/apabla1/yquantum-2026-aws-statestreet" target="_blank">GitHub</a>
+    </nav>
+
+    <div class="main">
+        <div class="hero">
+            <div class="exchange-tabs">
+                <button onclick="selectExchange('sp500')" id="btn-sp500" class="active">NYSE (S&amp;P 500)</button>
+                <button onclick="selectExchange('nikkei')" id="btn-nikkei">Nikkei 225</button>
+                <button onclick="selectExchange('lse')" id="btn-lse">London (FTSE)</button>
+            </div>
+            <div class="hero-top">
+                <div>
+                    <h1 id="hero-title">Quantum-Augmented Portfolio</h1>
+                    <div class="subtitle" id="hero-subtitle">QPU-weighted predictions — Ridge + quantum features</div>
+                </div>
+                <div class="hero-number">
+                    <div class="pct" id="hero-pct" style="color:#2e7d32">+0.50%</div>
+                    <div class="pct-label">Composite 5-Day Predicted Return</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-panel">
+            <h2>Portfolio Returns</h2>
+            <p class="note">Predicted 5-day excess returns per stock. Model: Ridge + Section 11 features (QPU-weighted).</p>
+            <iframe id="frame-portfolio" class="chart-frame" src="charts/portfolio_sp500.html"></iframe>
+        </div>
+
+        <div class="chart-panel">
+            <h2>Predictions: Actual vs Predicted</h2>
+            <p class="note">Composite walk-forward predictions. Select individual stocks via dropdown.</p>
+            <iframe id="frame-predictions" class="chart-frame" src="charts/predictions_sp500.html"></iframe>
+        </div>
+
+        <div class="chart-panel">
+            <h2>Prediction Quality</h2>
+            <p class="note">Cumulative returns, net error, and sign-based P&amp;L with Sharpe ratio.</p>
+            <iframe id="frame-quality" class="chart-frame chart-frame-tall" src="charts/quality_sp500.html"></iframe>
+            <div class="data-source">Data: <a href="https://pypi.org/project/yfinance/" style="color:#888;">yfinance</a> (Yahoo Finance API). Updated at market open.</div>
+        </div>
+
+        <div class="chart-panel" id="analysis-panel" style="display:none;">
+            <h2 id="analysis-title">Analysis</h2>
+            <iframe id="frame-analysis" class="chart-frame chart-frame-tall" src=""></iframe>
+        </div>
+
+        <footer>
+            yQuantum 2026 — AWS x State Street Challenge |
+            Data via <a href="https://pypi.org/project/yfinance/">yfinance</a> (Yahoo Finance) |
+            Amazon Braket | PennyLane | Plotly
+        </footer>
+    </div>
+
+    <script>
+        const marketData = {"sp500": {"pct": "+0.50", "n_buy": "5", "name": "S&P 500", "positive": true}, "nikkei": {"pct": "-0.85", "n_buy": "1", "name": "Nikkei 225", "positive": false}, "lse": {"pct": "-0.32", "n_buy": "1", "name": "London Stock Exchange", "positive": false}};
+        const chartMap = {
+            'sp500': { portfolio: 'charts/portfolio_sp500.html', predictions: 'charts/predictions_sp500.html', quality: 'charts/quality_sp500.html' },
+            'nikkei': { portfolio: 'charts/portfolio_nikkei.html', predictions: 'charts/predictions_nikkei.html', quality: 'charts/quality_nikkei.html' },
+            'lse': { portfolio: 'charts/portfolio_lse.html', predictions: 'charts/predictions_lse.html', quality: 'charts/quality_lse.html' }
+        };
+
+        function loadChart(src) {
+            // Show analysis panel, hide exchange panels
+            document.getElementById('analysis-panel').style.display = 'block';
+            document.getElementById('frame-analysis').src = src;
+            document.getElementById('analysis-title').textContent = src.split('/').pop().replace('.html','').replace(/_/g,' ');
+            document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+            if (event && event.target) event.target.classList.add('active');
+            document.getElementById('analysis-panel').scrollIntoView({behavior:'smooth'});
+        }
+
+        function selectExchange(key) {
+            const d = marketData[key];
+            if (!d) return;
+            // Update hero
+            document.getElementById('hero-pct').textContent = d.pct + '%';
+            document.getElementById('hero-pct').style.color = d.positive ? '#2e7d32' : '#c62828';
+            document.getElementById('hero-title').textContent = d.name + ' Portfolio';
+            document.getElementById('hero-subtitle').textContent = d.name + ' — QPU-weighted predictions';
+            // Swap all three chart panels
+            const charts = chartMap[key];
+            if (charts) {
+                document.getElementById('frame-portfolio').src = charts.portfolio;
+                document.getElementById('frame-predictions').src = charts.predictions;
+                document.getElementById('frame-quality').src = charts.quality;
+            }
+            // Hide analysis panel
+            document.getElementById('analysis-panel').style.display = 'none';
+            // Update tabs + sidebar nav
+            ['sp500','nikkei','lse'].forEach(k => {
+                const btn = document.getElementById('btn-' + k);
+                if (btn) { btn.className = k === key ? 'active' : ''; }
+                const nav = document.getElementById('nav-' + k);
+                if (nav) { nav.className = k === key ? 'active' : ''; }
+            });
+        }
+    </script>
+</body>
+</html>

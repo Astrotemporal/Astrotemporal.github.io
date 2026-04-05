@@ -1,0 +1,811 @@
+{
+  "total_runs": 70,
+  "total_cost_usd": 50.2,
+  "per_device": {
+    "ionq_forte": {
+      "runs": 4,
+      "cost_usd": 32.0
+    },
+    "iqm_garnet": {
+      "runs": 1,
+      "cost_usd": 1.45
+    },
+    "local": {
+      "runs": 5,
+      "cost_usd": 0
+    },
+    "quera_aquila": {
+      "runs": 1,
+      "cost_usd": 10.0
+    },
+    "rigetti_ankaa": {
+      "runs": 12,
+      "cost_usd": 6.75
+    },
+    "sv1": {
+      "runs": 47,
+      "cost_usd": 0
+    }
+  },
+  "runs": [
+    {
+      "sample_idx": 0,
+      "device": "local",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 0.01,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 1,
+      "device": "local",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 0.0,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 2,
+      "device": "local",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 0.0,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 3,
+      "device": "local",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 0.0,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 4,
+      "device": "local",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 0.0,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 0,
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 9.7,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 1,
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 3.26,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 2,
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 3.3,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 3,
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 3.24,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 4,
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 100,
+      "elapsed_s": 3.27,
+      "n_measurements": 100,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "sample_idx": 0,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 8.01,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 1,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.64,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 2,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.71,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 3,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.77,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 4,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.73,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 5,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.67,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 6,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.7,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 7,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.67,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 8,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.62,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 9,
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "elapsed_s": 2.71,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 0,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 2.68,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 1,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 2.67,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 2,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 2.68,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 3,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 2.65,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 4,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 2.64,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 5,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 3.36,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 6,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 3.25,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 7,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 2.76,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 8,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 2.61,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 9,
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "elapsed_s": 2.82,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 0,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.78,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 1,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.71,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 2,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.79,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 3,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.74,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 4,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.74,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 5,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 3.29,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 6,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.63,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 7,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.62,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 8,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.65,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "sample_idx": 9,
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "elapsed_s": 2.74,
+      "n_measurements": 1000,
+      "success": true,
+      "source": "cli",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "reference [0.5,-0.3,1.2,0.8]",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "zz",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "reference",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "qrw",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "reference",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "cry",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "reference",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 0",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 1",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 2",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 3",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 4",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 5",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 6",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 7",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 8",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "angle sweep 9",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "reference input",
+      "elapsed_s": 7.61,
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "diverse input 0",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "diverse input 1",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "diverse input 2",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "diverse input 3",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "rigetti_ankaa",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "diverse input 4",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "ionq_forte",
+      "circuit": "angle",
+      "shots": 100,
+      "source": "braket_direct",
+      "note": "reference input",
+      "task_id": "de76cd30-c044-4ec1-a474-9e2d82299b41",
+      "status": "COMPLETED",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "device": "ionq_forte",
+      "circuit": "angle",
+      "shots": 100,
+      "source": "braket_direct",
+      "note": "angle timeout recovery",
+      "task_id": "d6859978-0266-41ea-bfa4-a289e64ab5ca",
+      "status": "QUEUED",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "device": "ionq_forte",
+      "circuit": "cry",
+      "shots": 100,
+      "source": "braket_direct",
+      "note": "CRY on IonQ",
+      "task_id": "fe3fd7a5-8dbf-4bb2-8aa9-bbc40c1b3ca0",
+      "status": "QUEUED",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "device": "ionq_forte",
+      "circuit": "cry",
+      "shots": 100,
+      "source": "braket_direct",
+      "note": "CRY on IonQ (earlier)",
+      "task_id": "9f24cdae",
+      "status": "QUEUED",
+      "n_runs": 1,
+      "shots_total": 100
+    },
+    {
+      "device": "iqm_garnet",
+      "circuit": "angle",
+      "shots": 1000,
+      "source": "braket_direct",
+      "note": "angle on IQM",
+      "status": "QUEUED",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "quera_aquila",
+      "circuit": "analog",
+      "shots": 1000,
+      "source": "braket_direct",
+      "note": "analog correlation experiment",
+      "status": "QUEUED",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "vqc",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "variational VQC test",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "zz_var",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "variational ZZ+var test",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "sv1",
+      "circuit": "reupload",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "variational reupload test",
+      "n_runs": 1,
+      "shots_total": 1000
+    },
+    {
+      "device": "rigetti_ankaa",
+      "circuit": "vqc",
+      "shots": 1000,
+      "source": "plai_api",
+      "note": "VQC on QPU",
+      "task_id": "f8768a17-2c33-47a2-b471-6f76b5d0d397",
+      "n_runs": 1,
+      "shots_total": 1000
+    }
+  ],
+  "plai_infra_runs": [
+    {
+      "device": "sv1",
+      "circuit": "cry",
+      "shots": 1000,
+      "source": "plai_infra",
+      "note": "routing kernel SV1 1-5"
+    },
+    {
+      "device": "rigetti_ankaa",
+      "circuit": "cry",
+      "shots": 1000,
+      "source": "plai_infra",
+      "note": "routing kernel QPU 1-5"
+    }
+  ],
+  "manual_additions": []
+}

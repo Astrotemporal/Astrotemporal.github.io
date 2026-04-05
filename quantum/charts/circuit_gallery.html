@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Circuit & Equation Gallery</title>
+<style>body{font-family:-apple-system,sans-serif;background:#fff;color:#222;max-width:900px;margin:0 auto;padding:2rem;}
+h1{color:#f5c518;} h2{color:#666;margin-top:2rem;}</style>
+</head><body>
+<h1>Circuit & Equation Gallery</h1>
+<p style="color:#888;">Quantum circuit diagrams (PennyLane) and classical feature augmentation formulas. Reference input: [0.5, -0.3, 1.2, 0.8]</p>
+
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">Angle Encoding + CNOT Ladder</h3>
+                <span style="background:#7B1FA2;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Quantum</span>
+            </div>
+            <pre style="font-size:11px;overflow-x:auto;background:#f5f5f5;padding:12px;border-radius:8px;color:#333;">0: ─╭AngleEmbedding(M0)─╭●───────┤  <Z> ╭<Z@Z> ╭<Z@Z> ╭<Z@Z>                     
+1: ─├AngleEmbedding(M0)─╰X─╭●────┤  <Z> ╰<Z@Z> │      │      ╭<Z@Z> ╭<Z@Z>       
+2: ─├AngleEmbedding(M0)────╰X─╭●─┤  <Z>        ╰<Z@Z> │      ╰<Z@Z> │      ╭<Z@Z>
+3: ─╰AngleEmbedding(M0)───────╰X─┤  <Z>               ╰<Z@Z>        ╰<Z@Z> ╰<Z@Z>
+
+M0 = 
+[ 0.5 -0.3  1.2  0.8]</pre>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Depth: ~5 | Output: 10 features | Schuld, Sweke, Meyer (2021) — Effect of data encoding on expressive power</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">ZZ Feature Map</h3>
+                <span style="background:#7B1FA2;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Quantum</span>
+            </div>
+            <pre style="font-size:11px;overflow-x:auto;background:#f5f5f5;padding:12px;border-radius:8px;color:#333;">0: ──H──RZ(0.50)──╭●────────────╭●─╭●───────────╭●─╭●───────────╭●──H──RZ(0.50)─────── ···
+1: ──H──RZ(-0.30)─╰X──RZ(-0.15)─╰X─│────────────│──│────────────│──╭●────────────╭●─╭● ···
+2: ──H──RZ(1.20)───────────────────╰X──RZ(0.60)─╰X─│────────────│──╰X──RZ(-0.36)─╰X─│─ ···
+3: ──H──RZ(0.80)───────────────────────────────────╰X──RZ(0.40)─╰X──────────────────╰X ···
+
+0: ··· ─────────────────────────────╭●────────────╭●────────╭●───────────╭●─╭●───────────╭●─── ···
+1: ··· ────────────╭●──H──RZ(-0.30)─╰X──RZ(-0.15)─╰X────────│────────────│──│────────────│──╭● ···
+2: ··· ────────────│──╭●────────────╭●──H──────────RZ(1.20)─╰X──RZ(0.60)─╰X─│────────────│──╰X ···
+3: ··· ──RZ(-0.24)─╰X─╰X──RZ(0.96)──╰X──H──────────RZ(0.80)─────────────────╰X──RZ(0.40)─╰X─── ···
+
+0: ··· ────────────────────────────────────────────────┤  <Z> ╭<Z@Z> ╭<Z@Z> ╭<Z@Z>               ···
+1: ··· ────────────╭●─╭●────────────╭●─────────────────┤  <Z> ╰<Z@Z> │      │      ╭<Z@Z> ╭<Z@Z> ···
+2: ··· ──RZ(-0.36)─╰X─│─────────────│──╭●───────────╭●─┤  <Z>        ╰<Z@Z> │      ╰<Z@Z> │      ···
+3: ··· ───────────────╰X──RZ(-0.24)─╰X─╰X──RZ(0.96)─╰X─┤  <Z>               ╰<Z@Z>        ╰<Z@Z> ···
+
+0: ···        
+1: ···        
+2: ···  ╭<Z@Z>
+3: ···  ╰<Z@Z></pre>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Depth: ~24 | Output: 10 features | Havlíček et al. (2019) — Supervised learning with quantum-enhanced feature spaces (Nature)</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">IQP Embedding</h3>
+                <span style="background:#7B1FA2;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Quantum</span>
+            </div>
+            <pre style="font-size:11px;overflow-x:auto;background:#f5f5f5;padding:12px;border-radius:8px;color:#333;">0: ─╭IQPEmbedding(M0)─┤  <Z> ╭<Z@Z> ╭<Z@Z> ╭<Z@Z>                     
+1: ─├IQPEmbedding(M0)─┤  <Z> ╰<Z@Z> │      │      ╭<Z@Z> ╭<Z@Z>       
+2: ─├IQPEmbedding(M0)─┤  <Z>        ╰<Z@Z> │      ╰<Z@Z> │      ╭<Z@Z>
+3: ─╰IQPEmbedding(M0)─┤  <Z>               ╰<Z@Z>        ╰<Z@Z> ╰<Z@Z>
+
+M0 = 
+[ 0.5 -0.3  1.2  0.8]</pre>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Depth: ~20 | Output: 10 features | Shepherd & Bremner (2009) — Temporally unstructured quantum computation</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">Deep Angle Encoding</h3>
+                <span style="background:#7B1FA2;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Quantum</span>
+            </div>
+            <pre style="font-size:11px;overflow-x:auto;background:#f5f5f5;padding:12px;border-radius:8px;color:#333;">0: ─╭AngleEmbedding(M0)─╭●───────╭X─╭AngleEmbedding(M0)─╭●───────╭X─╭AngleEmbedding(M0)─┤  <Z> ···
+1: ─├AngleEmbedding(M0)─╰X─╭●────│──├AngleEmbedding(M0)─╰X─╭●────│──├AngleEmbedding(M0)─┤  <Z> ···
+2: ─├AngleEmbedding(M0)────╰X─╭●─│──├AngleEmbedding(M0)────╰X─╭●─│──├AngleEmbedding(M0)─┤  <Z> ···
+3: ─╰AngleEmbedding(M0)───────╰X─╰●─╰AngleEmbedding(M0)───────╰X─╰●─╰AngleEmbedding(M0)─┤  <Z> ···
+
+0: ···  ╭<Z@Z> ╭<Z@Z> ╭<Z@Z>                     
+1: ···  ╰<Z@Z> │      │      ╭<Z@Z> ╭<Z@Z>       
+2: ···         ╰<Z@Z> │      ╰<Z@Z> │      ╭<Z@Z>
+3: ···                ╰<Z@Z>        ╰<Z@Z> ╰<Z@Z>
+
+M0 = 
+[ 0.5 -0.3  1.2  0.8]</pre>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Depth: ~15 | Output: 10 features | Extended from Schuld et al.</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">Quantum Random Walk</h3>
+                <span style="background:#7B1FA2;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Quantum</span>
+            </div>
+            <pre style="font-size:11px;overflow-x:auto;background:#f5f5f5;padding:12px;border-radius:8px;color:#333;">0: ──RY(0.50)──RZ(-0.30)─╭●──RY(-0.30)──RZ(1.20)─╭●──RY(1.20)──RZ(0.80)─╭●───────┤  <Z> ╭<Z@Z> ···
+1: ──X───────────────────╰X─╭●───────────────────╰X─╭●──────────────────╰X─╭●────┤  <Z> ╰<Z@Z> ···
+2: ─────────────────────────╰X─────────╭●───────────╰X────────╭●───────────╰X─╭●─┤  <Z>        ···
+3: ────────────────────────────────────╰X─────────────────────╰X──────────────╰X─┤  <Z>        ···
+
+0: ···  ╭<Z@Z> ╭<Z@Z>                     
+1: ···  │      │      ╭<Z@Z> ╭<Z@Z>       
+2: ···  ╰<Z@Z> │      ╰<Z@Z> │      ╭<Z@Z>
+3: ···         ╰<Z@Z>        ╰<Z@Z> ╰<Z@Z></pre>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Depth: ~15 | Output: 10 features | Zhang et al. (NeurIPS 2020) — QRW for time series classification</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">CRY / QPCA-Inspired</h3>
+                <span style="background:#7B1FA2;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Quantum</span>
+            </div>
+            <pre style="font-size:11px;overflow-x:auto;background:#f5f5f5;padding:12px;border-radius:8px;color:#333;">0: ──RY(0.50)──╭RY(-0.30)─────────────────────╭●─────────RZ(0.25)─┤  <Z> ╭<Z@Z> ╭<Z@Z> ╭<Z@Z> ···
+1: ──RY(-0.30)─╰●─────────╭RY(1.20)───────────│──────────RZ(0.09)─┤  <Z> ╰<Z@Z> │      │      ···
+2: ──RY(1.20)─────────────╰●────────╭RY(0.80)─│──────────RZ(1.44)─┤  <Z>        ╰<Z@Z> │      ···
+3: ──RY(0.80)───────────────────────╰●────────╰RY(0.50)──RZ(0.64)─┤  <Z>               ╰<Z@Z> ···
+
+0: ···                      
+1: ···  ╭<Z@Z> ╭<Z@Z>       
+2: ···  ╰<Z@Z> │      ╭<Z@Z>
+3: ···         ╰<Z@Z> ╰<Z@Z></pre>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Depth: ~10 | Output: 10 features | Novel (this work)</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">Polynomial Features (degree 2)</h3>
+                <span style="background:#1565C0;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Classical</span>
+            </div>
+            <div style="background:#f5f5f5;padding:16px;border-radius:8px;font-size:14px;color:#333;font-family:serif;">\phi(\mathbf{X}) = \{X_i, X_i^2, X_i X_j \mid i \neq j\}</div>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Output: 14 features | Standard (sklearn PolynomialFeatures)</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">Polynomial Features (degree 3)</h3>
+                <span style="background:#1565C0;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Classical</span>
+            </div>
+            <div style="background:#f5f5f5;padding:16px;border-radius:8px;font-size:14px;color:#333;font-family:serif;">\phi(\mathbf{X}) = \{X_i, X_i^2, X_i^3, X_i X_j, X_i X_j X_k\}</div>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Output: 34 features | Standard</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">GKX Interaction Features</h3>
+                <span style="background:#1565C0;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Classical</span>
+            </div>
+            <div style="background:#f5f5f5;padding:16px;border-radius:8px;font-size:14px;color:#333;font-family:serif;">\phi(\mathbf{X}) = \{X_i X_j, X_i^2, \log(|X_i|+1), \text{sign}(X_i) X_i^2\}</div>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Output: 18 features | Gu, Kelly, Xiu (2020) — Empirical Asset Pricing via ML</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">Quaternion Hamilton Product</h3>
+                <span style="background:#1565C0;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Classical</span>
+            </div>
+            <div style="background:#f5f5f5;padding:16px;border-radius:8px;font-size:14px;color:#333;font-family:serif;">q = \frac{\mathbf{x}}{||\mathbf{x}||}, \quad \phi(q) = \{q^2, q \cdot q', \theta_{rot}, \exp(q)\}</div>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Output: 14 features | IEEE 10802922 (2024); arXiv 2504.13232</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">Fourier Features</h3>
+                <span style="background:#1565C0;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Classical</span>
+            </div>
+            <div style="background:#f5f5f5;padding:16px;border-radius:8px;font-size:14px;color:#333;font-family:serif;">\phi(\mathbf{X}) = \{X_i, \sin(kX_i), \cos(kX_i) \mid k=1,2,3\}</div>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Output: 28 features | Rahimi & Recht (2007) — Random Features for Large-Scale Kernel Machines</div>
+        </div>
+        
+        <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;padding:16px;margin:12px 0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <h3 style="color:#f5c518;margin:0;">Log-Polynomial Features</h3>
+                <span style="background:#1565C0;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">Classical</span>
+            </div>
+            <div style="background:#f5f5f5;padding:16px;border-radius:8px;font-size:14px;color:#333;font-family:serif;">\phi(\mathbf{X}) = \{X_i, \log(|X_i|+1), \text{sign}(X_i) X_i^2, X_i^3\}</div>
+            <div style="color:#888;font-size:12px;margin-top:8px;">Output: 16 features | Standard</div>
+        </div>
+        
+</body></html>

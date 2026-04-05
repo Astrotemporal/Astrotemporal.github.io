@@ -1,0 +1,290 @@
+{
+  "classical_quat_fourier": {
+    "mse": 1.249519197389414,
+    "mae": 0.8848418809247675,
+    "r2": 0.9642614015824451,
+    "correlation": 0.9820309148746984,
+    "n_features": 42,
+    "time_s": 0.001,
+    "category": "algebraic"
+  },
+  "hybrid_poly2+quat+fourier": {
+    "mse": 1.2523496158036378,
+    "mae": 0.8769519186562909,
+    "r2": 0.9641804462939862,
+    "correlation": 0.9820090887825346,
+    "n_features": 56,
+    "time_s": 0,
+    "category": "hybrid"
+  },
+  "hybrid_ALL": {
+    "mse": 1.3050864506968274,
+    "mae": 0.8958929224985246,
+    "r2": 0.9626720736591373,
+    "correlation": 0.9811858792557464,
+    "n_features": 88,
+    "time_s": 0,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+quat+angle": {
+    "mse": 1.3545579092988937,
+    "mae": 0.9143570095050404,
+    "r2": 0.9612570969258435,
+    "correlation": 0.9805146939315498,
+    "n_features": 38,
+    "time_s": 0,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+quat+qrw": {
+    "mse": 1.3602371784750202,
+    "mae": 0.9140237079855001,
+    "r2": 0.9610946591491252,
+    "correlation": 0.9804307529867792,
+    "n_features": 38,
+    "time_s": 0,
+    "category": "hybrid"
+  },
+  "classical_fourier": {
+    "mse": 1.3626968737745369,
+    "mae": 0.9130766076149499,
+    "r2": 0.9610243072387883,
+    "correlation": 0.9804168823438438,
+    "n_features": 28,
+    "time_s": 0.001,
+    "category": "classical"
+  },
+  "hybrid_poly2+quat+deep_angle": {
+    "mse": 1.373385839028381,
+    "mae": 0.9170798333874445,
+    "r2": 0.9607185827349116,
+    "correlation": 0.9802081244305867,
+    "n_features": 38,
+    "time_s": 0,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+quat+cry": {
+    "mse": 1.3779881009945314,
+    "mae": 0.9128703187367382,
+    "r2": 0.9605869493894101,
+    "correlation": 0.9801122194698765,
+    "n_features": 38,
+    "time_s": 0,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+quat+zz": {
+    "mse": 1.3873170432211577,
+    "mae": 0.9169450868580699,
+    "r2": 0.9603201241012557,
+    "correlation": 0.9800260938438633,
+    "n_features": 38,
+    "time_s": 0,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+quat+iqp": {
+    "mse": 1.3873170432211577,
+    "mae": 0.9169450868580699,
+    "r2": 0.9603201241012557,
+    "correlation": 0.9800260938438633,
+    "n_features": 38,
+    "time_s": 0,
+    "category": "hybrid"
+  },
+  "classical_gkx": {
+    "mse": 1.6003374869065075,
+    "mae": 0.9577972367378562,
+    "r2": 0.954227338886346,
+    "correlation": 0.9769975176447712,
+    "n_features": 22,
+    "time_s": 0.001,
+    "category": "classical"
+  },
+  "classical_poly3": {
+    "mse": 1.7835347865226083,
+    "mae": 0.9238770924746589,
+    "r2": 0.9489875516659182,
+    "correlation": 0.9744782588408006,
+    "n_features": 34,
+    "time_s": 0.001,
+    "category": "classical"
+  },
+  "hybrid_poly2+qrw": {
+    "mse": 1.7879042137979286,
+    "mae": 1.0111367627155472,
+    "r2": 0.9488625778303551,
+    "correlation": 0.9742293511474109,
+    "n_features": 24,
+    "time_s": 0.001,
+    "category": "hybrid"
+  },
+  "classical_log_poly": {
+    "mse": 1.79168406843143,
+    "mae": 1.0490191224639989,
+    "r2": 0.948754466880875,
+    "correlation": 0.9741149838979497,
+    "n_features": 16,
+    "time_s": 0.001,
+    "category": "classical"
+  },
+  "hybrid_poly2+angle": {
+    "mse": 1.8006412088071762,
+    "mae": 1.0098338341452295,
+    "r2": 0.9484982758247253,
+    "correlation": 0.9740671673601793,
+    "n_features": 24,
+    "time_s": 0.001,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+zz": {
+    "mse": 1.9244680569612524,
+    "mae": 1.0324441848708794,
+    "r2": 0.9449565951456802,
+    "correlation": 0.9722110414884104,
+    "n_features": 24,
+    "time_s": 0.001,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+iqp": {
+    "mse": 1.9244680569612524,
+    "mae": 1.0324441848708794,
+    "r2": 0.9449565951456802,
+    "correlation": 0.9722110414884104,
+    "n_features": 24,
+    "time_s": 0.001,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+deep_angle": {
+    "mse": 1.9545869346079947,
+    "mae": 1.0454956399720536,
+    "r2": 0.9440951386148375,
+    "correlation": 0.9717633035775199,
+    "n_features": 24,
+    "time_s": 0.001,
+    "category": "hybrid"
+  },
+  "hybrid_poly2+cry": {
+    "mse": 1.9729620195581274,
+    "mae": 1.0309197100943126,
+    "r2": 0.9435695766360434,
+    "correlation": 0.9714338639380188,
+    "n_features": 24,
+    "time_s": 0.001,
+    "category": "hybrid"
+  },
+  "classical_poly2": {
+    "mse": 2.079957235422743,
+    "mae": 1.083469690119797,
+    "r2": 0.9405093122876651,
+    "correlation": 0.9699228367547044,
+    "n_features": 14,
+    "time_s": 0.001,
+    "category": "classical"
+  },
+  "classical_quaternion": {
+    "mse": 2.4104706758965295,
+    "mae": 1.1637980935509493,
+    "r2": 0.9310560064518077,
+    "correlation": 0.9649746285913914,
+    "n_features": 18,
+    "time_s": 0.001,
+    "category": "algebraic"
+  },
+  "classical_octonion": {
+    "mse": 2.6931977179570636,
+    "mae": 1.2337200486380697,
+    "r2": 0.9229694814595587,
+    "correlation": 0.9608406385114052,
+    "n_features": 13,
+    "time_s": 0.001,
+    "category": "algebraic"
+  },
+  "classical_raw": {
+    "mse": 4.67498138010918,
+    "mae": 1.614201582757165,
+    "r2": 0.8662867425307764,
+    "correlation": 0.9308410472404769,
+    "n_features": 4,
+    "time_s": 0.001,
+    "category": "classical"
+  },
+  "quantum_qrw": {
+    "mse": 9.234724296354937,
+    "mae": 2.2867889883886154,
+    "r2": 0.735869521801825,
+    "correlation": 0.8582162775131927,
+    "n_features": 10,
+    "time_s": 5.095,
+    "category": "quantum"
+  },
+  "quantum_angle": {
+    "mse": 9.269284895788944,
+    "mae": 2.286656273534488,
+    "r2": 0.734881023676448,
+    "correlation": 0.8577151333703652,
+    "n_features": 10,
+    "time_s": 4.175,
+    "category": "quantum"
+  },
+  "quantum_cry": {
+    "mse": 11.138785454843795,
+    "mae": 2.415946690683825,
+    "r2": 0.6814097926132944,
+    "correlation": 0.8269157792298341,
+    "n_features": 10,
+    "time_s": 5.103,
+    "category": "quantum"
+  },
+  "quantum_zz": {
+    "mse": 17.41131011590925,
+    "mae": 2.9211515946048014,
+    "r2": 0.5020037935743182,
+    "correlation": 0.7117076391698344,
+    "n_features": 10,
+    "time_s": 8.71,
+    "category": "quantum"
+  },
+  "quantum_iqp": {
+    "mse": 17.41131011590925,
+    "mae": 2.9211515946048014,
+    "r2": 0.5020037935743182,
+    "correlation": 0.7117076391698344,
+    "n_features": 10,
+    "time_s": 5.257,
+    "category": "quantum"
+  },
+  "quantum_deep_angle": {
+    "mse": 20.70616732555646,
+    "mae": 3.20347543251693,
+    "r2": 0.40776468231873575,
+    "correlation": 0.6405004514234257,
+    "n_features": 10,
+    "time_s": 5.84,
+    "category": "quantum"
+  },
+  "quantum_tm_iqp": {
+    "mse": 22.66408200422524,
+    "mae": 3.4298723065954775,
+    "r2": 0.3517646411965407,
+    "correlation": 0.5947609651802758,
+    "n_features": 4,
+    "time_s": 2.419,
+    "category": "quantum"
+  },
+  "quantum_tm_reservoir": {
+    "mse": 32.52570400240768,
+    "mae": 4.179696131208744,
+    "r2": 0.06970371001988385,
+    "correlation": 0.27906231567764067,
+    "n_features": 4,
+    "time_s": 3.976,
+    "category": "quantum"
+  },
+  "quantum_tm_zz": {
+    "mse": 35.13332966742359,
+    "mae": 4.241798429921362,
+    "r2": -0.004879286912070846,
+    "correlation": NaN,
+    "n_features": 4,
+    "time_s": 3.935,
+    "category": "quantum"
+  }
+}
